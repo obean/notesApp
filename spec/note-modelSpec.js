@@ -1,25 +1,32 @@
 class testingSuite {
-// beforeEach() {
-//   var app = new noteApp
-// }
- static itIsAnInstance() {
-    var app = new noteApp
-    if(2 != 2){
-      console.log("did not smash it")
-      throw new Error("how did you screw this one up")
 
-    }else {console.log("smashed it")}
+ static itIsAnInstance(app) {
+    var testApp = new app
+    var text = "Is an instance of noteApp";
+    assert.isTrue(text, testApp.constructor.name == 'noteApp')
   }
 
   static itTakesANoteAsAnArgumentAndStoresIt(app) {
     var app = new app("I have no idea what I'm doing")
-    if(app.text != "I have no idea what I'm doing"){
-      console.log("did not smash it")
-      throw new Error("how did you screw this one up")
-    } else {
-      console.log("clearly you do know what you're doing, smashing it")
-    }
+    var text = "Take a note as an argument and stores it"
+
+    assert.isTrue(text, app.text == "I have no idea what I'm doing")
   }
+  
 }
-testingSuite.itIsAnInstance()
+
+
+class assert {
+  static isTrue(text, assertionToCheck) {
+      if (!assertionToCheck) {
+        throw new Error("Assertion failed: " + text + " is not truthy");
+      } 
+      else {
+        console.log("%c Smashed it: " + text, 'background-color: floralwhite; color: green')
+      }
+    }
+}
+
+
+testingSuite.itIsAnInstance(noteApp)
 testingSuite.itTakesANoteAsAnArgumentAndStoresIt(noteApp)
