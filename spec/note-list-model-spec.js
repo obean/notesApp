@@ -3,6 +3,7 @@ class noteListModelSpec {
     var noteList = new noteListModel
     assert.isTrue("initiates with an array", Array.isArray(noteList.notes))
   }
+
   static addsNote() {
     var noteList = new noteListModel
     noteList.addNote("to do: smash it")
@@ -17,10 +18,11 @@ class noteListModelSpec {
     assert.isTrue("returns notes", noteList.showNotes() == noteList.notes)
   }
 
-
 }
+
 noteListModelSpec.checkArray()
 noteListModelSpec.addsNote()
 noteListModelSpec.showsNotes()
+
 // noteListModelSpec.
 // noteListModelSpec.

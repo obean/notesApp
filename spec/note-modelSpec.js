@@ -15,7 +15,5 @@ class noteModelSpec {
 
 }
 
-
-
 noteModelSpec.itIsAnInstance(noteApp)
 noteModelSpec.itTakesANoteAsAnArgumentAndStoresIt(noteApp)

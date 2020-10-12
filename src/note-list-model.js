@@ -1,7 +1,9 @@
 class noteListModel {
+
   constructor() {
     this.notes = []
   }
+
   addNote(note) {
     this.notes.push(note)
   }
@@ -9,4 +11,5 @@ class noteListModel {
   showNotes() {
     return this.notes
   }
+  
 }
