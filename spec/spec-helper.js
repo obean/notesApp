@@ -2,10 +2,11 @@ class assert {
 
   static isTrue(text, assertionToCheck) {
       if (!assertionToCheck) {
-        console.log("%c Assertion failed: " + text + " is not truthy", 'background-color: floralwhite; color: red');
+        y = "%c Assertion failed: " + text + " is not truthy" + 'background-color: floralwhite; color: red'
+        return (y);
       } 
       else {
-        console.log("%c Smashed it: " + text, 'background-color: floralwhite; color: green')
+        return ("%c Smashed it: " + text + 'background-color: floralwhite; color: green')
       }
     }
     
