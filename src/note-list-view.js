@@ -20,15 +20,17 @@ class noteListView {
     var htmlString = "<ul>";
     for(var index = 0; index <= notes.length-1; index++) {
       
-      var noteTwenty = notes[index].split('')
-      while(noteTwenty.length > 20){
-        noteTwenty.pop()
-      }
-    htmlString += "<li><div>" + noteTwenty.join('') + "</div></li>"
+      // var noteTwenty = notes[index].split('')
+      // while(noteTwenty.length > 20){
+      //   noteTwenty.pop()
+      // }
+
+    htmlString += '<li><div><a href="#notes/' + notes[index].id.toString() +'">' + notes[index].text.substring(0,20) + "</a></div></li>"
+    console.log(htmlString)
     if(index == notes.length-1) 
       { htmlString += "</ul>" }
     }
-
+    console.log(htmlString)
     return htmlString
   }
 

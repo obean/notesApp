@@ -19,7 +19,7 @@ class noteControllerSpec {
   static addsANote() {
     var listModel = new noteListModel
     var controller = new noteController(listModel)
-    assert.isTrue("instantiates with a note ", controller.listmodel.showNotes()[0] === "Favourite drink: seltzer")
+    assert.isTrue("instantiates with a note ", controller.listmodel.showNotes()[0].text === "Favourite drink: seltzer")
   }
 }
 
