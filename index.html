@@ -1,18 +1,23 @@
-<script>
-var httpServer = require("../http-server");
-  var path = require("path");
-  var pathToHtmlAndJsFiles = path.join(__dirname, "/Users/nicolakeys/Makers/Projects/notesApp/notesApp");
-  var server = httpServer.createServer({ root: pathToHtmlAndJsFiles });
-  server.listen(3000)
- </script>
+<html></html>
+  <body>
+    <script>
+      <div id="app">
+         <p>Hello</p>
+      </div>
+    var httpServer = require("../http-server");
+      var path = require("path");
+      var pathToHtmlAndJsFiles = path.join(__dirname, "/Users/nicolakeys/Makers/Projects/notesApp/notesApp");
+      var server = httpServer.createServer({ root: pathToHtmlAndJsFiles });
+      server.listen(3000)
+    </script>
 
-<div id="app">
-  <p>Hello</p>
-</div>
-<script src="src/note-model.js"></script>
-<script src="src/note-list-model.js"></script>
-<script src="src/note-list-view.js"></script>
-<script src="src/note-controller.js"></script>
-<!-- <script src="src/note-list-view.js"></script>
-<script src="src/note-model.js"></script>
-<script src="src/note-list-model.js"></script> -->
+
+    <script src="src/note-model.js"></script>
+    <script src="src/note-list-model.js"></script>
+    <script src="src/note-list-view.js"></script>
+    <script src="src/note-controller.js"></script>
+    <!-- <script src="src/note-list-view.js"></script>
+    <script src="src/note-model.js"></script>
+    <script src="src/note-list-model.js"></script> -->
+  </body>
+</html>

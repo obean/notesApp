@@ -11,8 +11,8 @@ class noteListViewSpec {
     noteListModelVar.addNote("This is a note")
     noteListModelVar.addNote("This is a second note")
     var noteListViewVar = new noteListView(noteListModelVar)
-
-    assert.isTrue("Outputs formatted HTML", noteListViewVar.output() == "<ul><li><div>This is a note</div></li><li><div>This is a second note</div></li></ul>")
+    console.log(noteListViewVar.output())
+    assert.isTrue("Outputs formatted HTML", noteListViewVar.output() == "<ul><li><div>This is a note</div></li><li><div>This is a second not</div></li></ul>")
   }
 
 }
