@@ -13,6 +13,11 @@ class noteListViewSpec {
     var noteListViewVar = new noteListView(noteListModelVar)
     assert.isTrue("Outputs formatted HTML", noteListViewVar.output() == "<ul><li><div>This is a note</div></li><li><div>This is a second not</div></li></ul>")
   }
+  static quine() {
+    var y = new noteListViewSpec
+    console.log(y.constructor.name)
+  }
+
 
 }
 
