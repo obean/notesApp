@@ -1,8 +1,14 @@
 class noteListViewSpec {
+    constructor() {
+      this.returnArray = []
+    }
+    addArray() {
+      return [noteListViewSpec.outputsHTML(), noteListViewSpec.takesANoteListToInstantiate()]
+    }
   static takesANoteListToInstantiate() {
     var noteListModelVar= new noteListModel
     var noteListViewVar = new noteListView(noteListModelVar)
- 
+    
     assert.isTrue("Initiates with a noteListModel", noteListViewVar.noteList == noteListModelVar)
   }
 

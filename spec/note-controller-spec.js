@@ -1,5 +1,7 @@
 class noteControllerSpec {
-
+  constructor() {
+    this.outputAray = new Array
+  }
   static instantiatesWithnoteApp() {
     
     var listModel = new noteListModel
