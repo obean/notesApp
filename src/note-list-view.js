@@ -2,6 +2,7 @@ class noteListView {
   
   constructor(noteList) {
     this.noteList = noteList
+    
   }
 
   returnNoteList() {

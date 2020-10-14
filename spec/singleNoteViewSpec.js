@@ -6,17 +6,17 @@ class singleNoteViewSpec {
     var note = new noteApp("I miss ruby")
     
     var snv = new singleNoteView(note)
-    assert.isTrue(" smnv stores a note with constructor", snv.note instanceof noteApp)
+  return  assert.isTrue(" smnv stores a note with constructor", snv.note instanceof noteApp)
   }
 
   static HTMLifysThings() {
     var note = new noteApp("I miss ruby")
     var snv = new singleNoteView(note)
-    assert.isTrue("it htmlifies things", snv.htmlify() === "<div>I miss ruby</div>")
+  return  assert.isTrue("it htmlifies things", snv.htmlify() === "<div>I miss ruby</div>")
   }
    
 
+addArray() {
+return [singleNoteViewSpec.TakesNoteStoresIt(), singleNoteViewSpec.HTMLifysThings()]
 }
-
-singleNoteViewSpec.TakesNoteStoresIt()
-singleNoteViewSpec.HTMLifysThings()
+}
