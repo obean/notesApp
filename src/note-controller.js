@@ -18,6 +18,8 @@ class noteController {
     noteHtml.innerHTML = this.getHtml();
   }
 
+
+
 }
 
 var listModel = new noteListModel
