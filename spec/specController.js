@@ -8,7 +8,6 @@ addHTML = function(html,id) {
 getColour = function(statementOutput) {
   if(statementOutput.match(/failed/) != null){
     return "red"
-  
   }else if (statementOutput.match(/Smashed/)!= null){
     return "green"
   }
@@ -22,24 +21,37 @@ formatHTML = function(array) {
  }
  classParentDiv = function(className) {
   const newDiv = document.createElement("div")
-  y = new className
   const classId = quineda(className)
   newDiv.setAttribute("id", classId)
   document.body.appendChild(newDiv)
-  document.getElementById(classId).innerHTML  = ("<h1>" + classId + "</h1>")
+  document.getElementById(classId).innerHTML  = ("<h2>" + classId + "</h2>")
  }
+// kinda like a quine, not really, but i like the name
  quineda = function(className) {
    var instance = new className
-   return y.constructor.name
+   return instance.constructor.name
  }
+
 runSpec = function(className) {
   classParentDiv(className)
   var classInstance = new className
   console.log(classInstance.constructor.name)
   addHTML(formatHTML(classInstance.addArray()), classInstance.constructor.name)
 }
+
+getFunctions = function(className) {
+  var uncutFunctions = (className.toString().match(/static\s[a-zA-Z]+(\(\))/g))
+  for(let i = 0; i <= uncutFunctions.length-1; i ++){
+    uncutFunctions[i] = eval(quineda(className) + "." + uncutFunctions[i].replace("static ", ""))
+     console.log(uncutFunctions[i])
+   }
+  // return uncutFunctions
+}
+
 runSpec(noteListViewSpec)
 runSpec(noteControllerSpec)
 runSpec(noteListModelSpec)
 runSpec(noteModelSpec)
 runSpec(singleNoteViewSpec)
+
+
