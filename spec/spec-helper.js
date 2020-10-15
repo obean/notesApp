@@ -51,7 +51,7 @@ stem = ""
   const classId = quineda(className)
   newDiv.setAttribute("id", classId)
   document.body.appendChild(newDiv)
-  document.getElementById(classId).innerHTML  = ("<h2>" + classId + "</h2>")
+  document.getElementById(classId).innerHTML  = ("<h2>" + classId.replace(/([A-Z])/g, ' $1').trim() + "</h2>")
  }
 // kinda like a quine, not really, but i like the name and needed to get the class name as  a string
  quineda = function(className) {
