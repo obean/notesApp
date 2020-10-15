@@ -18,7 +18,7 @@ class assert {
       return (" Smashed it: " + text + warning)
     }else {
      
-      return (" Assertion failed: " + text + " is not truthy" + "<br></br>-Expected: " + expected + "  but got " + output)
+      return (" Assertion failed: " + text + " is not truthy" + "<br></br>-Expected:<b> " + expected + "</b>  but got: <b> " + output + "</b>")
     }
   }
 }
