@@ -31,7 +31,7 @@ class noteListView {
     if(index == notes.length-1) 
       { htmlString += "</ul>" }
     }
-    // console.log(htmlString)
+    console.log(htmlString)
     return htmlString
   }
 
