@@ -26,8 +26,8 @@ class noteListView {
       //   noteTwenty.pop()
       // }
 
-    htmlString += '<li><div><a href="#notes/' + notes[index].id.toString() +'">' + notes[index].text.substring(0,20) + "</a></div></li>"
-    // console.log(htmlString)
+    htmlString += '<li><div><a href="#notes/' + notes[index].id.toString() +'">' + notes[index].text.substring(0,20) + '</a><div id="' + notes[index].id + '"></div></div></li>'
+     console.log("GGGGGG" + htmlString)
     if(index == notes.length-1) 
       { htmlString += "</ul>" }
     }
