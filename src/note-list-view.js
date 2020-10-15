@@ -27,11 +27,11 @@ class noteListView {
       // }
 
     htmlString += '<li><div><a href="#notes/' + notes[index].id.toString() +'">' + notes[index].text.substring(0,20) + "</a></div></li>"
-    console.log(htmlString)
+    // console.log(htmlString)
     if(index == notes.length-1) 
       { htmlString += "</ul>" }
     }
-    console.log(htmlString)
+    // console.log(htmlString)
     return htmlString
   }
 

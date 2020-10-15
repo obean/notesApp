@@ -14,9 +14,4 @@ class singleNoteViewSpec {
     var snv = new singleNoteView(note)
   return  assert.isTrue("it htmlifies things", snv.htmlify() === "<div>I miss ruby</div>")
   }
-   
-
-addArray() {
-return [singleNoteViewSpec.TakesNoteStoresIt(), singleNoteViewSpec.HTMLifysThings()]
-}
 }

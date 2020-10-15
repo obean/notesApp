@@ -27,9 +27,7 @@ class noteListModelSpec {
   }
 
 
-addArray(){
-  return [noteListModelSpec.checkArray(), noteListModelSpec.addsNote(),noteListModelSpec.showsNotes(),noteListModelSpec.hasUniqueID()]
-}
+
 }
 // noteListModelSpec.
 // noteListModelSpec.

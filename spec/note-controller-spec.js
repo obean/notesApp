@@ -23,13 +23,7 @@ class noteControllerSpec {
     var controller = new noteController(listModel)
     return  assert.isTrue("instantiates with a note ", controller.listmodel.showNotes()[0].text === "Favourite drink: seltzer")
   }
-  addArray() {
-    return [noteControllerSpec.instantiatesWithnoteApp(), noteControllerSpec.addsANote(),noteControllerSpec.instantiatesWithnoteListView()]
-  }
-  quineda() { 
-    var y = new noteControllerSpec
-    return y.constructor.name
-  }
+
 }
 
 

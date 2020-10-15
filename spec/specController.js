@@ -31,22 +31,24 @@ formatHTML = function(array) {
    var instance = new className
    return instance.constructor.name
  }
-
+ getFunctions = function(className) {
+  var uncutFunctions = (className.toString().match(/static\s[a-zA-Z]+(\(\))/g))
+  var evaluatedFunctions = []
+  for(let i = 0; i <= uncutFunctions.length-1; i ++){
+    uncutFunctions[i] = eval(quineda(className) + "." + uncutFunctions[i].replace("static ", ""))
+    evaluatedFunctions.push(uncutFunctions[i])
+     console.log(uncutFunctions[i])
+   }
+  return evaluatedFunctions
+}
 runSpec = function(className) {
   classParentDiv(className)
   var classInstance = new className
   console.log(classInstance.constructor.name)
-  addHTML(formatHTML(classInstance.addArray()), classInstance.constructor.name)
+  addHTML(formatHTML(getFunctions(className)), classInstance.constructor.name)
 }
 
-getFunctions = function(className) {
-  var uncutFunctions = (className.toString().match(/static\s[a-zA-Z]+(\(\))/g))
-  for(let i = 0; i <= uncutFunctions.length-1; i ++){
-    uncutFunctions[i] = eval(quineda(className) + "." + uncutFunctions[i].replace("static ", ""))
-     console.log(uncutFunctions[i])
-   }
-  // return uncutFunctions
-}
+
 
 runSpec(noteListViewSpec)
 runSpec(noteControllerSpec)

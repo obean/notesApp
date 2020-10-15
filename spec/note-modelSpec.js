@@ -19,10 +19,5 @@ class noteModelSpec {
   }
 
 
-  addArray() {
-    return[
-noteModelSpec.itIsAnInstance(noteApp),
-noteModelSpec.itTakesANoteAsAnArgumentAndStoresIt(noteApp),
-noteModelSpec.itHasIdZero()]
-    }
+
 }
